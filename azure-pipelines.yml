@@ -16,6 +16,10 @@ steps:
     sshKeySecureFile: azdo_deploy_key
     knownHostsEntry: 20.234.214.19
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project. > ~/KendeeCICD/mytestfile
-  displayName: 'create new file in the KendeeCICD directory'
+- task: SSH@0
+  inputs:
+    sshEndpoint: KendeeCI
+    runOptions: 'commands'
+    commands: |
+      echo Add other tasks to build, test, and deploy your project. > ~/KendeeCICD/mytestfile
+      
