@@ -10,8 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+# Install SSH key
+- task: InstallSSHKey@0
+  inputs:
+    sshKeySecureFile: azdo_deploy_key
+    knownHostsEntry: 20.234.214.19
+
+- script: ssh kendeeadmin@20.234.214.19 && echo Hello, world!
+  displayName: 'Run script after connection'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
