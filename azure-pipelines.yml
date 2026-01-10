@@ -16,7 +16,7 @@ steps:
     sshKeySecureFile: azdo_deploy_key
     knownHostsEntry: 20.234.214.19
 
-- script: mkdir KendeeCICD
+- script: mkdir ~/KendeeCICD
   displayName: 'confirmation script'
 
 - script: |
