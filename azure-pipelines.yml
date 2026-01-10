@@ -16,7 +16,7 @@ steps:
     sshKeySecureFile: azdo_deploy_key
     knownHostsEntry: 20.234.214.19
 
-- script: ssh kendeeadmin@20.234.214.19 && echo Hello, world!
+- script: echo Hello, world!
   displayName: 'Run script after connection'
 
 - script: |
