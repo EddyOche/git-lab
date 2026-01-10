@@ -16,14 +16,6 @@ steps:
     sshKeySecureFile: azdo_deploy_key
     knownHostsEntry: 20.234.214.19
 
-- task: SSH@0
-  inputs:
-    sshEndpoint: KendeeCI
-    runOptions: 'commands'
-    commands: |
-      mkdir ~/KendeeCICD
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    echo Add other tasks to build, test, and deploy your project. > ~/KendeeCICD/mytestfile
+  displayName: 'create new file in the KendeeCICD directory'
