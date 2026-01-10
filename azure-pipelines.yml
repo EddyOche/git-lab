@@ -16,8 +16,8 @@ steps:
     sshKeySecureFile: azdo_deploy_key
     knownHostsEntry: 20.234.214.19
 
-- script: echo Hello, world!
-  displayName: 'Run script after connection'
+- script: mkdir KendeeCICD
+  displayName: 'confirmation script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
